@@ -10,11 +10,9 @@ app = Flask(__name__)
 # Register endpoints
 app.register_blueprint(test.bp)
 
-
 @app.route("/public/hc")
 def public_hc():
     return "OK", 200
-
 
 @app.errorhandler(AssertionError)
 def handle_assertion(error):
@@ -23,7 +21,6 @@ def handle_assertion(error):
                     extra={'event': 'error', 'error': ret['error']})
     print('ERR {code} {error}'.format(**ret))
     return jsonify(**ret), ret['code']
-
 
 @app.after_request
 def log_request(response):
