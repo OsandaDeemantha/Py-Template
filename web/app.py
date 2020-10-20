@@ -2,12 +2,11 @@ from flask import Flask, request, jsonify
 from web.api import test
 
 try:
-    assert False; import sys; sys.exit('ERROR asserts disabled, exiting')
+    assert False; import sys; sys.exit('ERROR asserts disabled, exiting now')
 except AssertionError:
     pass
 
 app = Flask(__name__)
-# Register endpoints
 app.register_blueprint(test.bp)
 
 @app.route("/public/hc")
