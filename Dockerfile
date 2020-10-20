@@ -8,6 +8,8 @@ RUN ls -lh
 
 RUN pwd
 
+RUN apk-add curl
+
 RUN pip3 install \
   gunicorn \
   flask \
