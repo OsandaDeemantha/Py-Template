@@ -6,6 +6,8 @@ CMD ["gunicorn", "-b", "0.0.0.0:8080", "--timeout=10", "--workers=4", "web.app:a
 
 RUN ls -lh
 
+RUN pwd
+
 RUN pip3 install \
   gunicorn \
   flask \
