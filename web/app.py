@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from web.api import test
 
 try:
-    assert False; import sys; sys.exit('ERROR asserts disabled, exiting now')
+    assert False; import sys; sys.exit('ERROR asserts disabled')
 except AssertionError:
     pass
 
@@ -12,6 +12,7 @@ app.register_blueprint(test.bp)
 @app.route("/public/hc")
 def public_hc():
     print('Home!')
+    print('orrgg  reeppoo')
     return "OK", 200
 
 @app.errorhandler(AssertionError)
