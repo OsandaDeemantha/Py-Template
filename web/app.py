@@ -11,8 +11,6 @@ app.register_blueprint(test.bp)
 
 @app.route("/public/hc")
 def public_hc():
-    print('Home!')
-    print('orrgg  reeppoo')
     return "OK", 200
 
 @app.errorhandler(AssertionError)
