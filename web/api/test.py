@@ -7,5 +7,5 @@ bp = Blueprint('test', __name__)
 #This is a test endpoint
 @bp.route('/test', methods=['GET'])
 def test():
-    print('Test!')
+    print('Test passed from test file')
     return 'test'
