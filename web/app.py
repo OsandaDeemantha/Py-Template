@@ -12,6 +12,7 @@ app.register_blueprint(test.bp)
 
 @app.route("/public/hc")
 def public_hc():
+    print("Hello")
     return "OK", 200
 
 @app.errorhandler(AssertionError)
