@@ -13,6 +13,8 @@ RUN pip3 install \
   webargs==4.1.2 \
   sqlalchemy==1.3.0b1 \
   https://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-8.0.18.zip#md5=e9c473418b52bcae9687dddb0b69369f
+  
+RUN ls -lh
 
 COPY . /src
 RUN cd /src && python3 setup.py develop
